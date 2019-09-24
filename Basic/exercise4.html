@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Exercise 4 | Temperature v2.0</title>
+	<link rel="stylesheet" href="exercise4.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div id="container">
+
+		<h1 id="paragraph"></h1>
+		<img src="" alt="" id="image">
+		
+	</div>
+
+
+	<script>
+
+		var temp = Math.floor(Math.random() * 44) - 5;
+		console.log(temp);
+
+		if (temp < 11) {
+			document.getElementById("paragraph").innerHTML = "The weather is cold<br>(" + temp + " degrees)";
+			document.getElementById("image").setAttribute("src", "cold.png");
+			document.getElementById("container").style.border = "5px solid blue"
+		} else if (temp < 33) {
+			document.getElementById("paragraph").innerHTML = "The weather is moderate<br>(" + temp + " degrees)";
+			document.getElementById("image").setAttribute("src", "moderate.png");
+			document.getElementById("container").style.border = "5px solid green"
+		} else {
+			document.getElementById("paragraph").innerHTML = "The weather is hot<br>(" + temp + " degrees)";
+			document.getElementById("image").setAttribute("src", "hot.jpeg");
+			document.getElementById("container").style.border = "5px solid red"
+		}
+		
+	</script>
+
+</body>
+</html>

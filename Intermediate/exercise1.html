@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intermediate Exercise 1 | Compare two numbers</title>
+</head>
+<body>
+	<h1 id="averageClassPoints"></h1>
+	<h1 id="grade"></h1>
+
+
+	<script>
+		var Martin = 76;
+		var Thomas = 85;
+		var Klaus = 65;
+		var Maria = 93;
+		var David = 81;
+
+		var averageClass = (Martin + Thomas + Klaus + Maria + David) / 5;
+		console.log(averageClass);
+
+		document.getElementById("averageClassPoints").innerHTML = "Average Class Points: " + averageClass;
+		var documentWriteGrade = document.getElementById("grade");
+
+		switch (true) {
+			case averageClass < 60:
+				documentWriteGrade.innerHTML = "Grade: F";
+				break;
+			case averageClass < 70:
+				documentWriteGrade.innerHTML = "Grade: D";
+				break;
+			case averageClass < 80:
+				documentWriteGrade.innerHTML = "Grade: C";
+				break;
+			case averageClass < 90:
+				documentWriteGrade.innerHTML = "Grade: B";
+				break;
+			case averageClass < 100:
+				documentWriteGrade.innerHTML = "Grade: A";
+				break;
+		}
+
+	</script>
+
+</body>
+</html>
